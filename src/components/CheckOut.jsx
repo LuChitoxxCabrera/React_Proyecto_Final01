@@ -20,8 +20,8 @@ export const CheckOut = () => {
             const pedidosRef = collection(db, "pedidos");
             const docRef = await addDoc(pedidosRef, pedido);
             setPedidoId(docRef.id);
-            vaciarCarrito(); // Vaciar el carrito después de que la compra se complete con éxito
-            reset(); // Resetear el formulario
+            vaciarCarrito();
+            reset(); 
         } catch (error) {
             console.error("Error al crear el pedido: ", error);
         }

@@ -18,7 +18,7 @@ const Carrito = () => {
                         {carrito.map((prod) => (
                             <div key={prod.id}>
                                 <h2>{prod.titulo}</h2>
-                                <p>Precio unidad: {prod.precio} €</p>
+                                <p>Precio unidad: {prod.precio} $</p>
                                 <p>Precio total: {prod.precio * prod.cantidad} €</p>
                                 <p>Cant: {prod.cantidad}</p>
                             </div>
