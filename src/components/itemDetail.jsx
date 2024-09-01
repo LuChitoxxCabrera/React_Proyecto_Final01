@@ -9,16 +9,12 @@ export const ItemDetail = ({item}) => {
 
     const [cantidad, setCantidad]= useState(1);
 
-    //funciones
     const handleRestar = () => {
         if (cantidad > 1) setCantidad(cantidad - 1);
     };
     const handleSumar = () => {
         cantidad< item.stock && setCantidad(cantidad +1);
     }
-    
-
-
 
 
 return (
@@ -29,7 +25,7 @@ return (
                 <h3 className="titulo">{item.titulo}</h3>
                 <p className='descripcion'>{item.descripcion}</p>
                 <p className='categoria'>Categoria:{item.categoria}</p>
-                <p className='precio'>€{item.precio}</p>
+                <p className='precio'>${item.precio}</p>
                 <ItemCount  
                 cantidad={cantidad} 
                 handleRestar={handleRestar} 
